@@ -38,7 +38,7 @@ DBCC DROPCLEANBUFFERS
 SET STATISTICS IO ON
 SET STATISTICS TIME ON
 
-SELECT title, lang, author AS loans FROM Bibrecs 
+SELECT title, lang, author FROM Bibrecs 
 JOIN Bibauthors 
 ON Bibrecs.bibno = Bibauthors.bibno
 JOIN Authors 
@@ -78,4 +78,4 @@ DROP INDEX Loanstats.IndxB;
 
 CREATE INDEX IndxC ON Sterms(term)
 
-DROP INDEX Publishers.IndxC;
+DROP INDEX Sterms.IndxC;

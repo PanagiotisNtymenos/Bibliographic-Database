@@ -1,15 +1,12 @@
 /* Να δημιουργήσετε κατάλληλο ευρετήριο που να επιταχύνει την εκτέλεση του παρακάτω ερωτήματος. */
 
-CREATE INDEX Indx ON Bibrecs(title);
-
-DROP INDEX Bibrecs.Indx;
-
-
 SELECT title FROM Bibrecs WHERE title LIKE 'Οικ%'
 ORDER BY title
 
 
+CREATE INDEX Indx ON Bibrecs(title);
 
+DROP INDEX Bibrecs.Indx;
 
 /* Εμφάνισε τον τίτλο των τεκμηρίων που περιέχουν στον τίτλο την λέξη πληροφορική. */
 

@@ -1,4 +1,4 @@
 CREATE INDEX Indx ON Bibrecs(title);
 
-SELECT Title FROM Bibrecs WHERE Title like 'Οικ%'
+SELECT Title FROM Bibrecs WHERE Title LIKE 'Οικ%'
 ORDER BY Title

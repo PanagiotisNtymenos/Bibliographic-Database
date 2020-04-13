@@ -3,6 +3,7 @@
 Να γράψετε τουλάχιστον δύο με τρία διαφορετικά επερωτήματα σε SQL που να απαντούν στο παραπάνω ερώτημα. Ποιό επερώτημα θα επιλέγατε και γιατί;
 */
 
+
 /* 1ος Τρόπος*/
 
 DBCC DROPCLEANBUFFERS
@@ -26,6 +27,7 @@ SELECT DISTINCT Bibrecs.bibno, Bibrecs.title FROM Bibrecs
 SET STATISTICS IO OFF
 SET STATISTICS TIME OFF
 
+
 /* 2ος Τρόπος*/
 
 DBCC DROPCLEANBUFFERS
@@ -45,6 +47,7 @@ SELECT DISTINCT Bibrecs.bibno, Bibrecs.title FROM Bibrecs
 SET STATISTICS IO OFF
 SET STATISTICS TIME OFF
 
+
 /* 3ος Τρόπος*/
 
 DBCC DROPCLEANBUFFERS
@@ -63,6 +66,8 @@ JOIN Copies
 
 SET STATISTICS IO OFF
 SET STATISTICS TIME OFF
+
+
 
 /* Δημιουργείστε κατάλληλα ευρετήρια που θα επιταχύνουν την εκτέλεση του επερωτήματος που επιλέξατε. */
 

@@ -1,8 +1,8 @@
-DROP INDEX Bibrecs.Indx;
-
 /* Να δημιουργήσετε κατάλληλο ευρετήριο που να επιταχύνει την εκτέλεση του παρακάτω ερωτήματος. */
 
 CREATE INDEX Indx ON Bibrecs(title);
+
+DROP INDEX Bibrecs.Indx;
 
 
 SELECT title FROM Bibrecs WHERE title LIKE 'Οικ%'

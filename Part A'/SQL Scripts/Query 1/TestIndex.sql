@@ -1,0 +1,25 @@
+DROP INDEX Bibrecs.Indx;
+
+DBCC DROPCLEANBUFFERS
+SET STATISTICS TIME ON
+
+SELECT title FROM Bibrecs WHERE title LIKE '%Πληροφορική%'
+ORDER BY title
+
+SET STATISTICS TIME OFF
+
+DBCC DROPCLEANBUFFERS
+SET STATISTICS TIME ON
+
+SELECT title FROM Bibrecs WHERE title LIKE '%Πληροφορική%'
+ORDER BY title
+
+SET STATISTICS TIME OFF
+
+
+
+
+CREATE INDEX Indx ON Bibrecs(title);
+
+SELECT title FROM Bibrecs WHERE title LIKE 'Οικ%'
+ORDER BY title

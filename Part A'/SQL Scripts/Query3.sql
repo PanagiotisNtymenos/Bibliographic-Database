@@ -71,7 +71,7 @@ SET STATISTICS TIME OFF
 
 /* Δημιουργείστε κατάλληλα ευρετήρια που θα επιταχύνουν την εκτέλεση του επερωτήματος που επιλέξατε. */
 
-CREATE INDEX Indx ON Copies(copyloc)
+CREATE INDEX Indx ON Bibrecs(title);
 
-DROP INDEX Copies.Indx
+DROP INDEX Bibrecs.Indx;
 

@@ -4,10 +4,8 @@ DBCC DROPCLEANBUFFERS
 SET STATISTICS IO ON
 SET STATISTICS TIME ON
 
-SELECT title, lang FROM Bibrecs 
-JOIN Publishers 
-ON Publishers.pubid = Bibrecs.pubid
-WHERE Publishers.pubname = 'Κλειδάριθμος'
+SELECT title, lang FROM Bibrecs, Publishers 
+WHERE Publishers.pubid = Bibrecs.pubid AND Publishers.pubname = 'Κλειδάριθμος'
 ORDER BY title
 
 SET STATISTICS IO OFF
@@ -62,20 +60,28 @@ SET STATISTICS TIME OFF
 
 /* A */
 
-CREATE INDEX IndxA ON Publishers(pubname)
+CREATE INDEX IndxA ON Publishers(pubname);
 
 DROP INDEX Publishers.IndxA;
 
 
 /* B */
 
-CREATE INDEX IndxB ON Loanstats(lid, loandate)
+CREATE INDEX IndxB ON Departments(depname);
 
-DROP INDEX Loanstats.IndxB;
+DROP INDEX Departments.IndxB;
 
 
 /* C */
 
-CREATE INDEX IndxC ON Sterms(term)
+CREATE INDEX IndxB ON Bibrecs(title, lang);
 
-DROP INDEX Sterms.IndxC;
+CREATE INDEX IndxS ON Sterms(term);
+
+CREATE INDEX IndxA ON Authors(author);
+
+DROP INDEX Bibrecs.IndxB;
+
+DROP INDEX Sterms.IndxS;
+
+DROP INDEX Authors.IndxA;
